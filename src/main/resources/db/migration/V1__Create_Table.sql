@@ -1,4 +1,3 @@
--- Wersja 1 migracji
 CREATE TABLE employees (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
