@@ -15,6 +15,12 @@ services:
     networks:
       - mydatabase-network
 
+  redis:
+    image: redis
+    container_name: mydatabase-redis
+    ports:
+      - "6379:6379"
+
 volumes:
   postgres-data:
 
