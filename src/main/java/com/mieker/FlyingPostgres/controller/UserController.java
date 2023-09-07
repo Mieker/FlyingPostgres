@@ -28,4 +28,9 @@ public class UserController {
     public ResponseEntity<Optional<Customer>> getUser(@PathVariable Long userId) {
         return ResponseEntity.ok(userService.getUser(userId));
     }
+
+    @GetMapping("/redis/{userId}")
+    public ResponseEntity<Customer> getAllUsersFromRedis(@PathVariable Long userId) {
+        return ResponseEntity.ok(userService.getUserFromRedis(userId));
+    }
 }
