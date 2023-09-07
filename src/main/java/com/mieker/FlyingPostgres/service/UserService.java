@@ -24,14 +24,20 @@ public class UserService {
     }
 
     public Optional<Customer> getUser(Long id) {
+        long startTime = System.currentTimeMillis();
+        long endTime;
         Customer customerFromCache = redisRepository.findById(id);
         if (null == customerFromCache) {
             Optional<Customer> customerFromDb = userRepository.findById(id);
             customerFromDb.ifPresent(redisRepository::save);
             log.info("Customer from Postgres SQL database.");
+            endTime = System.currentTimeMillis();
+            log.info(String.valueOf(endTime - startTime));
             return customerFromDb;
         }
         log.info("Customer from Redis cache.");
+        endTime = System.currentTimeMillis();
+        log.info(String.valueOf(endTime - startTime));
         return Optional.ofNullable(redisRepository.findById(id));
     }
 
