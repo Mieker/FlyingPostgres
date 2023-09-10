@@ -8,3 +8,9 @@ services:
       POSTGRES_PASSWORD: mypassword
     ports:
       - "5433:5432"
+
+  redis:
+    image: redis
+    container_name: mydatabase-redis
+    ports:
+      - "6379:6379"
