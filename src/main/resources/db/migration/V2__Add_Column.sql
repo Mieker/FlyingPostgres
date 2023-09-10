@@ -1,1 +1,1 @@
-ALTER TABLE employees ADD COLUMN hire_date DATE;
+ALTER TABLE customer ADD COLUMN join_date DATE;

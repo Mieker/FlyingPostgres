@@ -1,2 +1,2 @@
-INSERT INTO customer (id, name)
-VALUES (1, 'Janeczka');
+INSERT INTO customer (name, email, join_date)
+VALUES ('Janeczka', 'jjanet@example.com', '2023-09-30');
