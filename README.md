@@ -1,5 +1,6 @@
 # FlyingPostgres
 #### Demo application to show how connect and use Postgres SQL database with Flyway migration tool.
+#### Additionally, Redis memory database implemented to ensure fast access to the most frequently asked Customer.
 
 Due to many users has set their Postgres SQL instances on localhost environment on port 5432, docker compose file is prepared to set Postgres SQL database listen on port 5433 to avoid issues.
 
@@ -8,6 +9,7 @@ Prerequisites:
 - Maven
 - IDEA IntelliJ
 - Docker
+- Postman
 
 Build and run application with using IDEA IntelliJ:
 1. Open terminal from root folder and run ```docker compose up -d```
@@ -19,4 +21,7 @@ You can check database tables by connecting to the Postgres SQL docker container
 
 You can examine application by calling endpoint: \
 ``curl -X GET http://localhost:8080/api/user/all``
+
+You can examine application by using Postman collection included in this project (root).
+
 
