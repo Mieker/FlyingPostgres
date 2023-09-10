@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserRedisRepository {
+public class CustomerRedisRepository {
 
     @Autowired
     private RedisTemplate<Long, Customer> redisTemplate;
